@@ -1,0 +1,134 @@
+[gd_scene load_steps=7 format=3 uid="uid://docdgoxe4j60"]
+
+[ext_resource type="Texture2D" uid="uid://4488vlcocw40" path="res://Sprites/Game over background.png" id="1_fxqsr"]
+[ext_resource type="Script" path="res://Scripts/Scene management/Game_Over.cs" id="1_y7sdm"]
+[ext_resource type="Texture2D" uid="uid://c26m4hcuw1a7s" path="res://Sprites/Game over title.png" id="2_w8jra"]
+[ext_resource type="Texture2D" uid="uid://c1mjw52gh26cp" path="res://Sprites/Button Sprites/Play again button.png" id="4_1lyym"]
+[ext_resource type="FontFile" uid="uid://12pnjj0bbm0l" path="res://Sprites/arialroundedmtbold.ttf" id="4_agpmm"]
+[ext_resource type="Script" path="res://Scripts/Scene management/RichTextLabel.cs" id="4_l13mt"]
+
+[node name="Game_Over" type="Node2D"]
+script = ExtResource("1_y7sdm")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Control" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 1563.0
+offset_bottom = 856.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_fxqsr")
+expand_mode = 1
+
+[node name="TextureRect2" type="TextureRect" parent="CanvasLayer/Control"]
+layout_mode = 0
+offset_left = 270.0
+offset_top = 47.0
+offset_right = 1283.0
+offset_bottom = 498.0
+texture = ExtResource("2_w8jra")
+expand_mode = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer/Control"]
+layout_mode = 0
+offset_left = 555.0
+offset_top = 474.0
+offset_right = 959.0
+offset_bottom = 614.0
+theme_override_colors/default_color = Color(1, 0.2, 0.227451, 1)
+theme_override_fonts/normal_font = ExtResource("4_agpmm")
+theme_override_font_sizes/normal_font_size = 40
+text = "You died at:
+with time:"
+scroll_active = false
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="CanvasLayer/Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 3.255
+anchor_bottom = 1.684
+offset_left = 792.0
+offset_top = 477.0
+offset_right = 1225.8
+offset_bottom = 481.64
+theme_override_colors/default_color = Color(1, 0.2, 0.2, 1)
+theme_override_fonts/normal_font = ExtResource("4_agpmm")
+theme_override_font_sizes/normal_font_size = 40
+text = "HI BOZO
+"
+scroll_active = false
+script = ExtResource("4_l13mt")
+
+[node name="TextureButton" type="TextureButton" parent="CanvasLayer/Control"]
+layout_mode = 0
+offset_left = 553.0
+offset_top = 627.0
+offset_right = 1014.0
+offset_bottom = 932.0
+texture_normal = ExtResource("4_1lyym")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="GridContainer" type="GridContainer" parent="CanvasLayer/Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.021
+anchor_right = 0.195
+anchor_bottom = 0.219
+offset_left = 761.16
+offset_top = 530.0
+offset_right = 997.2
+offset_bottom = 582.24
+columns = 3
+
+[node name="Minutes" type="RichTextLabel" parent="CanvasLayer/Control/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_colors/default_color = Color(1, 0.215731, 0.227629, 1)
+theme_override_fonts/normal_font = ExtResource("4_agpmm")
+theme_override_font_sizes/normal_font_size = 50
+text = "hi"
+scroll_active = false
+visible_characters = 2
+text_direction = 2
+
+[node name="Seconds" type="RichTextLabel" parent="CanvasLayer/Control/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_colors/default_color = Color(0.996078, 0.262745, 0.262745, 1)
+theme_override_fonts/normal_font = ExtResource("4_agpmm")
+theme_override_font_sizes/normal_font_size = 50
+bbcode_enabled = true
+text = "hi
+"
+scroll_active = false
+visible_characters = 3
+text_direction = 2
+
+[node name="Miliseconds" type="RichTextLabel" parent="CanvasLayer/Control/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_colors/default_color = Color(0.999999, 0.244002, 0.199052, 1)
+theme_override_fonts/normal_font = ExtResource("4_agpmm")
+theme_override_font_sizes/normal_font_size = 50
+text = "hi
+"
+scroll_active = false
+visible_characters = 2
+visible_ratio = 0.666667
+text_direction = 2
+
+[connection signal="pressed" from="CanvasLayer/Control/TextureButton" to="." method="_on_texture_button_pressed"]

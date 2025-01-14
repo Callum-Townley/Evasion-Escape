@@ -1,0 +1,146 @@
+[gd_scene load_steps=8 format=3 uid="uid://b47m262iqlkx"]
+
+[ext_resource type="Texture2D" uid="uid://ckl2fec273lb7" path="res://Sprites/Victory screen.png" id="1_hfpse"]
+[ext_resource type="Script" path="res://Scripts/Scene management/victory.cs" id="1_nu01j"]
+[ext_resource type="Texture2D" uid="uid://c1mjw52gh26cp" path="res://Sprites/Button Sprites/Play again button.png" id="2_c2cqe"]
+[ext_resource type="Texture2D" uid="uid://bucpbt7pgdxm" path="res://Sprites/victory title.png" id="4_y5rnn"]
+[ext_resource type="FontFile" uid="uid://12pnjj0bbm0l" path="res://Sprites/arialroundedmtbold.ttf" id="5_ay8mu"]
+[ext_resource type="Script" path="res://Scripts/Scene management/RichTextLabel.cs" id="6_eoh5t"]
+[ext_resource type="Script" path="res://Scripts/Scene management/VPlabel.cs" id="7_prpqm"]
+
+[node name="Victory" type="Node2D"]
+script = ExtResource("1_nu01j")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Control" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_hfpse")
+
+[node name="TextureButton" type="TextureButton" parent="CanvasLayer/Control"]
+layout_mode = 0
+offset_left = 553.0
+offset_top = 627.0
+offset_right = 1014.0
+offset_bottom = 932.0
+texture_normal = ExtResource("2_c2cqe")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="TextureRect2" type="TextureRect" parent="CanvasLayer/Control"]
+layout_mode = 0
+offset_left = 219.0
+offset_right = 1325.0
+offset_bottom = 633.0
+texture = ExtResource("4_y5rnn")
+expand_mode = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer/Control"]
+layout_mode = 0
+offset_left = 515.0
+offset_top = 405.0
+offset_right = 1076.0
+offset_bottom = 631.0
+theme_override_colors/default_color = Color(0.413589, 0.903292, 0.644102, 1)
+theme_override_fonts/normal_font = ExtResource("5_ay8mu")
+theme_override_font_sizes/normal_font_size = 50
+text = "You beat:
+with time:
+VP awarded:"
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="CanvasLayer/Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 3.255
+anchor_bottom = 1.684
+offset_left = 771.0
+offset_top = 416.0
+offset_right = -3617.0
+offset_bottom = -1036.6
+theme_override_colors/default_color = Color(0.413589, 0.903292, 0.644102, 1)
+theme_override_fonts/normal_font = ExtResource("5_ay8mu")
+theme_override_font_sizes/normal_font_size = 40
+text = "HI BOZO
+"
+scroll_active = false
+script = ExtResource("6_eoh5t")
+
+[node name="RichTextLabel3" type="RichTextLabel" parent="CanvasLayer/Control"]
+layout_mode = 0
+offset_left = 843.0
+offset_top = 532.0
+offset_right = 1232.0
+offset_bottom = 597.0
+theme_override_colors/default_color = Color(0.229032, 0.916294, 0.483329, 1)
+theme_override_fonts/normal_font = ExtResource("5_ay8mu")
+theme_override_font_sizes/normal_font_size = 40
+text = "HI
+"
+script = ExtResource("7_prpqm")
+
+[node name="GridContainer" type="GridContainer" parent="CanvasLayer/Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.021
+anchor_right = 0.195
+anchor_bottom = 0.219
+offset_left = 724.4
+offset_top = 470.0
+offset_right = 688.0
+offset_bottom = 339.9
+columns = 3
+
+[node name="Minutes" type="RichTextLabel" parent="CanvasLayer/Control/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_colors/default_color = Color(1.15514e-06, 0.98102, 0.587589, 1)
+theme_override_fonts/normal_font = ExtResource("5_ay8mu")
+theme_override_font_sizes/normal_font_size = 50
+text = "hi"
+scroll_active = false
+visible_characters = 2
+text_direction = 2
+
+[node name="Seconds" type="RichTextLabel" parent="CanvasLayer/Control/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_colors/default_color = Color(2.59906e-06, 0.986605, 0.501971, 1)
+theme_override_fonts/normal_font = ExtResource("5_ay8mu")
+theme_override_font_sizes/normal_font_size = 50
+bbcode_enabled = true
+text = "hi
+"
+scroll_active = false
+visible_characters = 3
+text_direction = 2
+
+[node name="Miliseconds" type="RichTextLabel" parent="CanvasLayer/Control/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_colors/default_color = Color(7.41214e-06, 0.991628, 0.403868, 1)
+theme_override_fonts/normal_font = ExtResource("5_ay8mu")
+theme_override_font_sizes/normal_font_size = 50
+text = "hi
+"
+scroll_active = false
+visible_characters = 2
+visible_ratio = 0.666667
+text_direction = 2
+
+[connection signal="pressed" from="CanvasLayer/Control/TextureButton" to="." method="_on_texture_button_pressed"]

@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://cjij5bm4gvtr1"]
+
+[ext_resource type="Script" path="res://Scripts/Ability logic/Mantle2_Projectile.cs" id="1_y230u"]
+[ext_resource type="Texture2D" uid="uid://dk7tpppkwb5qq" path="res://Sprites/Ability Sprites/Atlantia water.png" id="2_bfav2"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_15emf"]
+radius = 154.003
+
+[node name="Mantle2_projectile" type="StaticBody2D"]
+disable_mode = 2
+collision_layer = 64
+collision_mask = 6
+script = ExtResource("1_y230u")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-2, -7)
+shape = SubResource("CircleShape2D_15emf")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_bfav2")

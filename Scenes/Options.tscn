@@ -1,0 +1,88 @@
+[gd_scene load_steps=7 format=3 uid="uid://cbehpt0x1n8ve"]
+
+[ext_resource type="Texture2D" uid="uid://dtiunb6855alq" path="res://Sprites/pause background.png" id="1_q4ywu"]
+[ext_resource type="Script" path="res://Scripts/Scene management/Options.cs" id="1_yk0i7"]
+[ext_resource type="Texture2D" uid="uid://7qpy7x61p53y" path="res://Sprites/Button Sprites/Resume button (options).png" id="2_5jmso"]
+[ext_resource type="Texture2D" uid="uid://dmw6jp1og1k6x" path="res://Sprites/Button Sprites/Quit to menu button (options).png" id="3_ryaho"]
+[ext_resource type="Texture2D" uid="uid://disyrgstn78si" path="res://Sprites/Button Sprites/Mouse (unselected) button (options).png" id="4_sg67o"]
+[ext_resource type="Texture2D" uid="uid://birws3e2afy4n" path="res://Sprites/Button Sprites/WASD (selected) button (options).png" id="6_mfvgw"]
+
+[node name="Options" type="Control"]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 201.0
+offset_top = 130.0
+offset_right = -153.0
+offset_bottom = -162.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_yk0i7")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+process_mode = 3
+layout_mode = 2
+offset_left = 5.0
+offset_top = -11.0
+offset_right = 1643.0
+offset_bottom = 1014.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_q4ywu")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+process_mode = 3
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 5.0
+offset_top = -11.0
+offset_right = -34.0
+offset_bottom = 33.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="GridContainer" type="GridContainer" parent="MarginContainer"]
+process_mode = 3
+layout_mode = 2
+size_flags_stretch_ratio = 1.44
+columns = 2
+
+[node name="Resume button" type="TextureButton" parent="MarginContainer/GridContainer"]
+process_mode = 3
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource("2_5jmso")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Quit to menu button" type="TextureButton" parent="MarginContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource("3_ryaho")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Mouse button" type="TextureButton" parent="MarginContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource("4_sg67o")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="WASD" type="TextureButton" parent="MarginContainer/GridContainer"]
+layout_mode = 2
+texture_normal = ExtResource("6_mfvgw")
+ignore_texture_size = true
+stretch_mode = 0
+
+[connection signal="pressed" from="MarginContainer/GridContainer/Resume button" to="." method="_on_resume_button_pressed"]
+[connection signal="pressed" from="MarginContainer/GridContainer/Quit to menu button" to="." method="_on_quit_to_menu_button_pressed"]
+[connection signal="pressed" from="MarginContainer/GridContainer/Mouse button" to="." method="_on_mouse_button_pressed"]
+[connection signal="pressed" from="MarginContainer/GridContainer/WASD" to="." method="_on_wasd_pressed"]

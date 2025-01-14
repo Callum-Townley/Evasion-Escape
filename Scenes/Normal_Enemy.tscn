@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://rr55cgkcofa6"]
+
+[ext_resource type="Texture2D" uid="uid://bwpa7h6ckfbsf" path="res://Sprites/Character sprites/Normal enemy.png" id="1_8ler6"]
+[ext_resource type="Script" path="res://Scripts/Enemy logic/Normal_Enemy.cs" id="1_w0r55"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_pomks"]
+radius = 136.004
+
+[node name="Normal_enemy" type="CharacterBody2D"]
+collision_layer = 4
+collision_mask = 202
+script = ExtResource("1_w0r55")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(157, 396)
+texture = ExtResource("1_8ler6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(159, 389)
+shape = SubResource("CircleShape2D_pomks")

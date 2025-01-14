@@ -1,0 +1,63 @@
+[gd_scene load_steps=4 format=3 uid="uid://b2bwxxnnnn758"]
+
+[ext_resource type="Texture2D" uid="uid://cqmf1dj205qmt" path="res://Sprites/menu mackground.png" id="1_ucxqx"]
+[ext_resource type="Texture2D" uid="uid://dclm0bg473kk4" path="res://Sprites/Button Sprites/Back button.png" id="3_eh6lj"]
+
+[sub_resource type="CSharpScript" id="CSharpScript_yyeip"]
+script/source = "using Godot;
+using System;
+
+public partial class Profile : Node2D
+{
+	// Called when the node enters the scene tree for the first time.
+	public override void _Ready()
+	{
+	}
+
+	// Called every frame. 'delta' is the elapsed time since the previous frame.
+	public override void _Process(double delta)
+	{
+	}
+
+	public void _on_texture_button_pressed()
+	{
+
+
+
+	}
+
+}
+"
+
+[node name="Profile" type="Node2D"]
+script = SubResource("CSharpScript_yyeip")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Control" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_ucxqx")
+expand_mode = 1
+
+[node name="TextureButton" type="TextureButton" parent="CanvasLayer/Control"]
+layout_mode = 0
+offset_right = 314.0
+offset_bottom = 244.0
+texture_normal = ExtResource("3_eh6lj")
+ignore_texture_size = true
+stretch_mode = 0
+
+[connection signal="pressed" from="CanvasLayer/Control/TextureButton" to="." method="_on_texture_button_pressed"]

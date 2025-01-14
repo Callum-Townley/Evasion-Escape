@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://bgsi207ewsde2"]
+
+[ext_resource type="Script" path="res://Scripts/Scene management/level_teleporter_forward.cs" id="1_bq5yp"]
+[ext_resource type="Texture2D" uid="uid://b6d0qxwsruy8c" path="res://Sprites/world assets/Teleporter.png" id="2_yex3x"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oeoxd"]
+size = Vector2(247.25, 1539)
+
+[node name="level teleporter" type="Area2D"]
+script = ExtResource("1_bq5yp")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = 6050.0
+offset_top = -306.0
+offset_right = 6291.0
+offset_bottom = 1225.0
+texture = ExtResource("2_yex3x")
+expand_mode = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(6172.63, 462.5)
+shape = SubResource("RectangleShape2D_oeoxd")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

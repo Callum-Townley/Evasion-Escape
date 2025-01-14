@@ -1,0 +1,97 @@
+[gd_scene load_steps=9 format=3 uid="uid://ccfhrmj7supb0"]
+
+[ext_resource type="Script" path="res://Scripts/Scene management/MainMenuScript.cs" id="1_ajnd5"]
+[ext_resource type="Texture2D" uid="uid://fc4kmc31g6e6" path="res://Sprites/Button Sprites/Play Button sprite.png" id="2_sbavd"]
+[ext_resource type="Texture2D" uid="uid://cqmf1dj205qmt" path="res://Sprites/menu mackground.png" id="2_unydi"]
+[ext_resource type="Texture2D" uid="uid://dmaij35ipllme" path="res://Sprites/Button Sprites/Leaderboards Button sprite.png" id="3_r4nkr"]
+[ext_resource type="Texture2D" uid="uid://nbslvo2tckd3" path="res://Sprites/Button Sprites/Logout Button sprite.png" id="5_pf2ko"]
+[ext_resource type="Texture2D" uid="uid://b11ojab44sacj" path="res://Sprites/Button Sprites/How To Play Button.png" id="6_wft18"]
+[ext_resource type="Texture2D" uid="uid://bo72iv7kix0kj" path="res://Sprites/Evasion escape title.png" id="7_l8afh"]
+[ext_resource type="Texture2D" uid="uid://bv34cpbhccnm4" path="res://Sprites/Button Sprites/Exit button.png" id="9_jf2ns"]
+
+[node name="MainMenu" type="Node2D"]
+script = ExtResource("1_ajnd5")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Control" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect2" type="TextureRect" parent="CanvasLayer/Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_unydi")
+
+[node name="Play Button" type="TextureButton" parent="CanvasLayer/Control"]
+layout_mode = 0
+offset_left = 558.0
+offset_top = 578.0
+offset_right = 1025.0
+offset_bottom = 885.0
+texture_normal = ExtResource("2_sbavd")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Leaderboards Button" type="TextureButton" parent="CanvasLayer/Control"]
+layout_mode = 0
+offset_left = 81.0
+offset_top = 605.0
+offset_right = 489.0
+offset_bottom = 872.0
+texture_normal = ExtResource("3_r4nkr")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Logout Button" type="TextureButton" parent="CanvasLayer/Control"]
+layout_mode = 0
+offset_left = 1272.0
+offset_top = 73.0
+offset_right = 1556.0
+offset_bottom = 231.0
+texture_normal = ExtResource("5_pf2ko")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="HowToPlay Button" type="TextureButton" parent="CanvasLayer/Control"]
+layout_mode = 0
+offset_left = 1093.0
+offset_top = 601.0
+offset_right = 1525.0
+offset_bottom = 886.0
+texture_normal = ExtResource("6_wft18")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Control"]
+layout_mode = 0
+offset_left = 397.0
+offset_top = 30.0
+offset_right = 1221.0
+offset_bottom = 538.0
+texture = ExtResource("7_l8afh")
+expand_mode = 1
+
+[node name="TextureButton" type="TextureButton" parent="CanvasLayer/Control"]
+layout_mode = 0
+offset_left = 11.0
+offset_top = 76.0
+offset_right = 259.0
+offset_bottom = 239.0
+texture_normal = ExtResource("9_jf2ns")
+ignore_texture_size = true
+stretch_mode = 0
+
+[connection signal="pressed" from="CanvasLayer/Control/Play Button" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/Leaderboards Button" to="." method="_on_leaderboards_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/Logout Button" to="." method="_on_logout_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/HowToPlay Button" to="." method="_on_how_to_play_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/TextureButton" to="." method="_on_texture_button_pressed"]

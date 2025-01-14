@@ -1,0 +1,31 @@
+[gd_scene load_steps=4 format=3 uid="uid://dacnnwgijuvi0"]
+
+[ext_resource type="PackedScene" uid="uid://by0rngplmrxtk" path="res://Scenes/Levels/Fourth_Level_Base.tscn" id="1_hrnsp"]
+[ext_resource type="PackedScene" uid="uid://c4q53fwbdxraj" path="res://Scenes/Entities/Character.tscn" id="2_c41kl"]
+[ext_resource type="PackedScene" uid="uid://b6g832dw320vj" path="res://Scenes/Entities/Homing enemy.tscn" id="3_eyheu"]
+
+[node name="Fourth_world_5" type="Node2D"]
+
+[node name="Level_Base" parent="." instance=ExtResource("1_hrnsp")]
+position = Vector2(945.196, 494.696)
+
+[node name="Player" parent="." instance=ExtResource("2_c41kl")]
+position = Vector2(1047, 954)
+
+[node name="Homing enemy" parent="." instance=ExtResource("3_eyheu")]
+position = Vector2(2177, 598)
+
+[node name="Homing enemy2" parent="." instance=ExtResource("3_eyheu")]
+position = Vector2(2893, 107)
+
+[node name="Homing enemy3" parent="." instance=ExtResource("3_eyheu")]
+position = Vector2(3175, 940)
+
+[node name="Homing enemy4" parent="." instance=ExtResource("3_eyheu")]
+position = Vector2(3725, 160)
+
+[node name="Homing enemy5" parent="." instance=ExtResource("3_eyheu")]
+position = Vector2(4372, 689)
+
+[node name="Homing enemy6" parent="." instance=ExtResource("3_eyheu")]
+position = Vector2(4777, 187)

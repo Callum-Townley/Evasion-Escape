@@ -1,0 +1,297 @@
+[gd_scene load_steps=24 format=3 uid="uid://c4q53fwbdxraj"]
+
+[ext_resource type="Script" path="res://Scripts/Char_movement.cs" id="1_thl2v"]
+[ext_resource type="Script" path="res://Scripts/Char_sprite.cs" id="2_0srmi"]
+[ext_resource type="Script" path="res://Scripts/Scene management/RichTextLabel.cs" id="3_622fj"]
+[ext_resource type="FontFile" uid="uid://12pnjj0bbm0l" path="res://Sprites/arialroundedmtbold.ttf" id="3_t8lea"]
+[ext_resource type="Texture2D" uid="uid://fch1thytrddm" path="res://Sprites/Button Sprites/Settings Button.png" id="5_sklts"]
+[ext_resource type="PackedScene" uid="uid://cbehpt0x1n8ve" path="res://Scenes/Options.tscn" id="6_v73am"]
+[ext_resource type="Texture2D" uid="uid://cif06rmo6k646" path="res://Sprites/ability background.png" id="7_i5fqh"]
+[ext_resource type="Script" path="res://Scripts/Scene management/Username_label.cs" id="8_j3pyn"]
+[ext_resource type="Script" path="res://Scripts/Ability logic/Energy.cs" id="9_flhm5"]
+[ext_resource type="Texture2D" uid="uid://3fsv0eju6chx" path="res://Sprites/Ability Sprites/Vanta void.png" id="10_7r6aa"]
+[ext_resource type="Script" path="res://Scripts/Ability logic/Radiation.cs" id="10_cxkwi"]
+[ext_resource type="Texture2D" uid="uid://b3kc7cypc7utb" path="res://Sprites/Ability Sprites/Radion Radiation.png" id="10_ggf2o"]
+[ext_resource type="Texture2D" uid="uid://bdv3dfai4cefi" path="res://Sprites/Button Sprites/Exported ability buttons/Spore Sporebomb.png" id="10_rdi8n"]
+[ext_resource type="Texture2D" uid="uid://bexbx715wxb1p" path="res://Sprites/Button Sprites/Exported ability buttons/Spore Spore trail.png" id="11_gocpr"]
+[ext_resource type="Script" path="res://Scripts/Scene management/Abilitybutton1.cs" id="11_sfsl8"]
+[ext_resource type="Script" path="res://Scripts/Ability logic/Hypnosis.cs" id="12_jl8fp"]
+[ext_resource type="Script" path="res://Scripts/Scene management/Abilitybutton2.cs" id="13_ty1uu"]
+[ext_resource type="Texture2D" uid="uid://c8s7fshghvs03" path="res://Sprites/finished j button.png" id="18_0void"]
+[ext_resource type="Texture2D" uid="uid://tai3xohgwdra" path="res://Sprites/finished k button.png" id="19_in4ww"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_6sx32"]
+radius = 81.615
+
+[sub_resource type="CSharpScript" id="CSharpScript_gda3b"]
+script/source = "using Godot;
+using System;
+
+public partial class CollisionShape2D : Godot.CollisionShape2D
+{
+	// Called when the node enters the scene tree for the first time.
+	public override void _Ready()
+	{
+	}
+
+	// Called every frame. 'delta' is the elapsed time since the previous frame.
+	public override void _Process(double delta)
+	{
+	}
+}
+"
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_26y7j"]
+radius = 641.175
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_vnf6t"]
+radius = 277.222
+
+[node name="Player" type="CharacterBody2D"]
+position = Vector2(790, 472)
+collision_layer = 33
+collision_mask = 38
+script = ExtResource("1_thl2v")
+
+[node name="Char_sprite" type="Sprite2D" parent="."]
+position = Vector2(0.999969, -0.999996)
+scale = Vector2(0.591667, 0.59)
+script = ExtResource("2_0srmi")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(2, -5)
+shape = SubResource("CircleShape2D_6sx32")
+script = SubResource("CSharpScript_gda3b")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(0.5, 0.5)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_left = -571.0
+offset_top = -863.0
+offset_right = 1174.0
+offset_bottom = -653.0
+theme_override_colors/default_color = Color(0.720996, 0.74649, 0.759898, 1)
+theme_override_fonts/normal_font = ExtResource("3_t8lea")
+theme_override_font_sizes/normal_font_size = 150
+bbcode_enabled = true
+text = "Placeholder text
+
+"
+scroll_active = false
+script = ExtResource("3_622fj")
+
+[node name="Username label" type="RichTextLabel" parent="."]
+offset_left = -272.0
+offset_top = 97.0
+offset_right = 286.0
+offset_bottom = 155.0
+theme_override_font_sizes/normal_font_size = 40
+bbcode_enabled = true
+text = "[centre][/centre]"
+scroll_active = false
+script = ExtResource("8_j3pyn")
+metadata/_edit_use_anchors_ = true
+
+[node name="Options" parent="." instance=ExtResource("6_v73am")]
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = -810.0
+offset_top = -483.0
+offset_right = 855.0
+offset_bottom = 551.0
+grow_horizontal = 1
+grow_vertical = 1
+
+[node name="Options button" type="TextureButton" parent="."]
+process_mode = 3
+offset_left = 1382.0
+offset_top = 698.0
+offset_right = 1597.0
+offset_bottom = 899.0
+texture_normal = ExtResource("5_sklts")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="TextureRect" type="TextureRect" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -705.0
+offset_top = 614.0
+offset_right = 776.0
+offset_bottom = 905.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("7_i5fqh")
+expand_mode = 1
+
+[node name="Energy2" type="RichTextLabel" parent="Control"]
+layout_mode = 0
+offset_left = -637.0
+offset_top = 634.0
+offset_right = -363.0
+offset_bottom = 753.0
+theme_override_colors/default_color = Color(0, 0.19592, 0.99999, 1)
+theme_override_fonts/normal_font = ExtResource("3_t8lea")
+theme_override_font_sizes/normal_font_size = 75
+text = "Energy"
+
+[node name="Energy" type="RichTextLabel" parent="Control"]
+layout_mode = 0
+offset_left = -652.0
+offset_top = 765.0
+offset_right = -338.0
+offset_bottom = 886.0
+theme_override_colors/default_color = Color(0, 0.19592, 0.99999, 1)
+theme_override_fonts/normal_font = ExtResource("3_t8lea")
+theme_override_font_sizes/normal_font_size = 100
+text = "
+"
+script = ExtResource("9_flhm5")
+
+[node name="TextureButton" type="TextureButton" parent="Control"]
+layout_mode = 0
+offset_left = 132.0
+offset_top = 620.0
+offset_right = 421.0
+offset_bottom = 885.0
+texture_normal = ExtResource("10_rdi8n")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("11_sfsl8")
+
+[node name="TextureButton2" type="TextureButton" parent="Control"]
+layout_mode = 0
+offset_left = 413.0
+offset_top = 622.0
+offset_right = 710.0
+offset_bottom = 885.0
+texture_normal = ExtResource("11_gocpr")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("13_ty1uu")
+
+[node name="GridContainer" type="GridContainer" parent="."]
+offset_left = -178.0
+offset_top = -697.0
+offset_right = 141.0
+offset_bottom = -566.0
+columns = 3
+
+[node name="Minutes" type="RichTextLabel" parent="GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/normal_font_size = 70
+text = "00"
+scroll_active = false
+visible_characters = 2
+text_direction = 2
+
+[node name="Seconds" type="RichTextLabel" parent="GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/normal_font_size = 70
+bbcode_enabled = true
+text = "00
+"
+scroll_active = false
+visible_characters = 3
+text_direction = 2
+
+[node name="Miliseconds" type="RichTextLabel" parent="GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/normal_font_size = 70
+text = "00
+"
+scroll_active = false
+visible_characters = 2
+visible_ratio = 0.666667
+text_direction = 2
+
+[node name="Radiation" type="Area2D" parent="."]
+visible = false
+show_behind_parent = true
+collision_layer = 8
+collision_mask = 4
+script = ExtResource("10_cxkwi")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Radiation"]
+shape = SubResource("CircleShape2D_26y7j")
+disabled = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Radiation"]
+position = Vector2(-15.2501, 14)
+scale = Vector2(4.449, 4.1)
+texture = ExtResource("10_ggf2o")
+
+[node name="Hypnosis" type="Area2D" parent="."]
+visible = false
+show_behind_parent = true
+collision_layer = 8
+collision_mask = 4
+script = ExtResource("12_jl8fp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hypnosis"]
+shape = SubResource("CircleShape2D_26y7j")
+disabled = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Hypnosis"]
+position = Vector2(-15.2501, 14)
+scale = Vector2(4.449, 4.1)
+texture = ExtResource("10_ggf2o")
+
+[node name="Blackhole_kill" type="StaticBody2D" parent="."]
+visible = false
+collision_layer = 64
+collision_mask = 64
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Blackhole_kill"]
+shape = SubResource("CircleShape2D_vnf6t")
+disabled = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Blackhole_kill"]
+position = Vector2(-1.99998, 5.00003)
+scale = Vector2(1.824, 1.776)
+texture = ExtResource("10_7r6aa")
+
+[node name="Main" type="Node2D" parent="."]
+
+[node name="FinishedJButton" type="TextureRect" parent="."]
+visible = false
+offset_left = 122.0
+offset_top = 630.0
+offset_right = 622.0
+offset_bottom = 1130.0
+scale = Vector2(0.186, 0.189)
+texture = ExtResource("18_0void")
+
+[node name="FinishedKButton" type="TextureRect" parent="."]
+visible = false
+offset_left = 398.0
+offset_top = 630.0
+offset_right = 898.0
+offset_bottom = 1130.0
+scale = Vector2(0.18, 0.192)
+texture = ExtResource("19_in4ww")
+
+[connection signal="pressed" from="Options button" to="Options" method="_on_options_button_pressed"]
+[connection signal="body_entered" from="Radiation" to="Radiation" method="_on_body_entered"]
+[connection signal="body_exited" from="Radiation" to="Radiation" method="_on_body_exited"]
+[connection signal="body_entered" from="Hypnosis" to="Hypnosis" method="_on_body_entered"]
+[connection signal="body_exited" from="Hypnosis" to="Hypnosis" method="_on_body_exited"]

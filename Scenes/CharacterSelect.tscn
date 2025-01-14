@@ -1,0 +1,181 @@
+[gd_scene load_steps=21 format=3 uid="uid://uwc58d5ecjxm"]
+
+[ext_resource type="Script" path="res://Scripts/Scene management/CharacterSelect.cs" id="1_5jcbn"]
+[ext_resource type="Texture2D" uid="uid://c3fr4m10gh601" path="res://Sprites/Button Sprites/spore character button.png" id="1_xuuvn"]
+[ext_resource type="Texture2D" uid="uid://cqmf1dj205qmt" path="res://Sprites/menu mackground.png" id="1_y40p5"]
+[ext_resource type="Script" path="res://Scripts/Scene management/Character_unlocks.cs" id="3_1aucm"]
+[ext_resource type="Texture2D" uid="uid://dk18rtsbfcujl" path="res://Sprites/character select logo.png" id="4_2mssf"]
+[ext_resource type="Texture2D" uid="uid://csswvgxx484a3" path="res://Sprites/Button Sprites/ignis character select button.png" id="4_fdg0p"]
+[ext_resource type="Texture2D" uid="uid://dacmt8uppi138" path="res://Sprites/Button Sprites/Atlantia character button.png" id="5_vb3yp"]
+[ext_resource type="Texture2D" uid="uid://btlhoh66yu8dd" path="res://Sprites/Button Sprites/Astraeus character button.png" id="6_0dn23"]
+[ext_resource type="Texture2D" uid="uid://8s6givdf76w4" path="res://Sprites/Button Sprites/Radion character button locked.png" id="7_0xk7m"]
+[ext_resource type="Texture2D" uid="uid://cugxfjdqh2j6u" path="res://Sprites/Button Sprites/Radion character button.png" id="7_xq2lk"]
+[ext_resource type="Texture2D" uid="uid://cm4n5p7sblxkm" path="res://Sprites/Button Sprites/Mantle character select locked.png" id="8_2vxoo"]
+[ext_resource type="Texture2D" uid="uid://d3ixd1mewsoqr" path="res://Sprites/Button Sprites/Mantle character button.png" id="9_uwx25"]
+[ext_resource type="Texture2D" uid="uid://dsk4tdjmvkdkr" path="res://Sprites/Button Sprites/Vanta character button locked.png" id="10_i3im2"]
+[ext_resource type="Texture2D" uid="uid://f2omi4bj1gpq" path="res://Sprites/Button Sprites/Ruin character button locked.png" id="11_8pkb7"]
+[ext_resource type="Texture2D" uid="uid://vgkcn6tect7b" path="res://Sprites/Button Sprites/Vanta character button.png" id="11_10lds"]
+[ext_resource type="Texture2D" uid="uid://c4a10as842p0w" path="res://Sprites/Button Sprites/Hypno character button locked.png" id="12_e5xdx"]
+[ext_resource type="Texture2D" uid="uid://cgsftkd6iu12s" path="res://Sprites/Button Sprites/Ruin character button.png" id="13_hnfj7"]
+[ext_resource type="Texture2D" uid="uid://ct1f414lplnea" path="res://Sprites/Button Sprites/Hypno character button.png" id="13_pvmcl"]
+[ext_resource type="FontFile" uid="uid://12pnjj0bbm0l" path="res://Sprites/arialroundedmtbold.ttf" id="18_by7no"]
+[ext_resource type="Texture2D" uid="uid://dclm0bg473kk4" path="res://Sprites/Button Sprites/Back button.png" id="20_tkq03"]
+
+[node name="CharacterSelect" type="Node2D"]
+script = ExtResource("1_5jcbn")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="background" type="TextureRect" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_y40p5")
+
+[node name="PanelContainer" type="PanelContainer" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 299.0
+offset_right = -758.0
+offset_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="GridContainer" type="GridContainer" parent="CanvasLayer/PanelContainer"]
+layout_mode = 2
+columns = 3
+script = ExtResource("3_1aucm")
+
+[node name="Char_button1" type="TextureButton" parent="CanvasLayer/PanelContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource("1_xuuvn")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Char_button2" type="TextureButton" parent="CanvasLayer/PanelContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 1.44
+texture_normal = ExtResource("4_fdg0p")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Char_button3" type="TextureButton" parent="CanvasLayer/PanelContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource("5_vb3yp")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Char_button4" type="TextureButton" parent="CanvasLayer/PanelContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource("6_0dn23")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Char_button5" type="TextureButton" parent="CanvasLayer/PanelContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+disabled = true
+texture_normal = ExtResource("7_xq2lk")
+texture_disabled = ExtResource("7_0xk7m")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Char_button6" type="TextureButton" parent="CanvasLayer/PanelContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+disabled = true
+texture_normal = ExtResource("9_uwx25")
+texture_disabled = ExtResource("8_2vxoo")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Char_button7" type="TextureButton" parent="CanvasLayer/PanelContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+disabled = true
+texture_normal = ExtResource("11_10lds")
+texture_disabled = ExtResource("10_i3im2")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Char_button8" type="TextureButton" parent="CanvasLayer/PanelContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+disabled = true
+texture_normal = ExtResource("13_hnfj7")
+texture_disabled = ExtResource("11_8pkb7")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Char_button9" type="TextureButton" parent="CanvasLayer/PanelContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+disabled = true
+texture_normal = ExtResource("13_pvmcl")
+texture_disabled = ExtResource("12_e5xdx")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="PanelContainer2" type="PanelContainer" parent="CanvasLayer"]
+offset_left = 841.0
+offset_right = 1599.0
+offset_bottom = 903.0
+
+[node name="Ability Description" type="RichTextLabel" parent="CanvasLayer/PanelContainer2"]
+layout_mode = 2
+theme_override_colors/default_color = Color(0.504014, 0.803622, 0.536926, 1)
+theme_override_fonts/normal_font = ExtResource("18_by7no")
+theme_override_font_sizes/normal_font_size = 40
+
+[node name="character select title" type="TextureRect" parent="CanvasLayer"]
+offset_left = 20.0
+offset_top = -7.0
+offset_right = 857.0
+offset_bottom = 350.0
+texture = ExtResource("4_2mssf")
+expand_mode = 1
+
+[node name="TextureButton" type="TextureButton" parent="CanvasLayer"]
+offset_left = 1261.0
+offset_top = 712.0
+offset_right = 1591.0
+offset_bottom = 931.0
+texture_normal = ExtResource("20_tkq03")
+ignore_texture_size = true
+stretch_mode = 0
+
+[connection signal="mouse_entered" from="CanvasLayer/PanelContainer/GridContainer/Char_button1" to="." method="_on_char_button_1_mouse_entered"]
+[connection signal="pressed" from="CanvasLayer/PanelContainer/GridContainer/Char_button1" to="." method="_on_char_button_1_pressed"]
+[connection signal="mouse_entered" from="CanvasLayer/PanelContainer/GridContainer/Char_button2" to="." method="_on_char_button_2_mouse_entered"]
+[connection signal="pressed" from="CanvasLayer/PanelContainer/GridContainer/Char_button2" to="." method="_on_char_button_2_pressed"]
+[connection signal="mouse_entered" from="CanvasLayer/PanelContainer/GridContainer/Char_button3" to="." method="_on_char_button_3_mouse_entered"]
+[connection signal="pressed" from="CanvasLayer/PanelContainer/GridContainer/Char_button3" to="." method="_on_char_button_3_pressed"]
+[connection signal="mouse_entered" from="CanvasLayer/PanelContainer/GridContainer/Char_button4" to="." method="_on_char_button_4_mouse_entered"]
+[connection signal="pressed" from="CanvasLayer/PanelContainer/GridContainer/Char_button4" to="." method="_on_char_button_4_pressed"]
+[connection signal="mouse_entered" from="CanvasLayer/PanelContainer/GridContainer/Char_button5" to="." method="_on_char_button_5_mouse_entered"]
+[connection signal="pressed" from="CanvasLayer/PanelContainer/GridContainer/Char_button5" to="." method="_on_char_button_5_pressed"]
+[connection signal="mouse_entered" from="CanvasLayer/PanelContainer/GridContainer/Char_button6" to="." method="_on_char_button_6_mouse_entered"]
+[connection signal="pressed" from="CanvasLayer/PanelContainer/GridContainer/Char_button6" to="." method="_on_char_button_6_pressed"]
+[connection signal="mouse_entered" from="CanvasLayer/PanelContainer/GridContainer/Char_button7" to="." method="_on_char_button_7_mouse_entered"]
+[connection signal="pressed" from="CanvasLayer/PanelContainer/GridContainer/Char_button7" to="." method="_on_char_button_7_pressed"]
+[connection signal="mouse_entered" from="CanvasLayer/PanelContainer/GridContainer/Char_button8" to="." method="_on_char_button_8_mouse_entered"]
+[connection signal="pressed" from="CanvasLayer/PanelContainer/GridContainer/Char_button8" to="." method="_on_char_button_8_pressed"]
+[connection signal="mouse_entered" from="CanvasLayer/PanelContainer/GridContainer/Char_button9" to="." method="_on_char_button_9_mouse_entered"]
+[connection signal="pressed" from="CanvasLayer/PanelContainer/GridContainer/Char_button9" to="." method="_on_char_button_9_pressed"]
+[connection signal="pressed" from="CanvasLayer/TextureButton" to="." method="_on_texture_button_pressed"]

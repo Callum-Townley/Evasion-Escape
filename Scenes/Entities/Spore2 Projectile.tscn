@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://ci7qchugvchnw"]
+
+[ext_resource type="Script" path="res://Scripts/Ability logic/Spore2_Projectile.cs" id="1_1c7ap"]
+[ext_resource type="Texture2D" uid="uid://dk7tpppkwb5qq" path="res://Sprites/Ability Sprites/Atlantia water.png" id="2_namaq"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_15emf"]
+radius = 154.003
+
+[node name="Spore2 Projectile" type="Area2D"]
+disable_mode = 2
+collision_layer = 72
+collision_mask = 6
+collision_priority = 0.0
+priority = 1
+script = ExtResource("1_1c7ap")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-2, -7)
+shape = SubResource("CircleShape2D_15emf")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_namaq")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

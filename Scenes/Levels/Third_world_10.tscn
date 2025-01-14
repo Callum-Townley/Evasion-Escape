@@ -1,0 +1,79 @@
+[gd_scene load_steps=4 format=3 uid="uid://cluy0nvu76or8"]
+
+[ext_resource type="PackedScene" uid="uid://b8okum5837el0" path="res://Scenes/Levels/Third_Level_Base.tscn" id="1_ksbpy"]
+[ext_resource type="PackedScene" uid="uid://c4q53fwbdxraj" path="res://Scenes/Entities/Character.tscn" id="2_icmkk"]
+[ext_resource type="PackedScene" uid="uid://die4834jmivl2" path="res://Scenes/Entities/Midnight enemy.tscn" id="3_iqo1m"]
+
+[node name="Third_world_10" type="Node2D"]
+
+[node name="Level_Base" parent="." instance=ExtResource("1_ksbpy")]
+position = Vector2(945.196, 494.696)
+
+[node name="Player" parent="." instance=ExtResource("2_icmkk")]
+position = Vector2(1090, 916)
+
+[node name="Midnight enemy" parent="." instance=ExtResource("3_iqo1m")]
+position = Vector2(1659, 534)
+
+[node name="Midnight enemy2" parent="." instance=ExtResource("3_iqo1m")]
+position = Vector2(1962, 386)
+
+[node name="Midnight enemy3" parent="." instance=ExtResource("3_iqo1m")]
+position = Vector2(2245, 561)
+
+[node name="Midnight enemy4" parent="." instance=ExtResource("3_iqo1m")]
+position = Vector2(2493, 325)
+
+[node name="Midnight enemy5" parent="." instance=ExtResource("3_iqo1m")]
+position = Vector2(2446, 655)
+
+[node name="Midnight enemy6" parent="." instance=ExtResource("3_iqo1m")]
+position = Vector2(3321, 567)
+
+[node name="Midnight enemy7" parent="." instance=ExtResource("3_iqo1m")]
+position = Vector2(2863, 238)
+
+[node name="Midnight enemy8" parent="." instance=ExtResource("3_iqo1m")]
+position = Vector2(2695, 668)
+
+[node name="Midnight enemy9" parent="." instance=ExtResource("3_iqo1m")]
+position = Vector2(4162, 359)
+
+[node name="Midnight enemy10" parent="." instance=ExtResource("3_iqo1m")]
+position = Vector2(3563, 197)
+
+[node name="Midnight enemy11" parent="." instance=ExtResource("3_iqo1m")]
+position = Vector2(3778, 682)
+
+[node name="Midnight enemy12" parent="." instance=ExtResource("3_iqo1m")]
+position = Vector2(4404, 621)
+
+[node name="Midnight enemy13" parent="." instance=ExtResource("3_iqo1m")]
+position = Vector2(4814, 473)
+
+[node name="Midnight enemy14" parent="." instance=ExtResource("3_iqo1m")]
+position = Vector2(4720, 924)
+
+[node name="Midnight enemy15" parent="." instance=ExtResource("3_iqo1m")]
+position = Vector2(4774, 171)
+
+[node name="Midnight enemy16" parent="." instance=ExtResource("3_iqo1m")]
+position = Vector2(5083, 594)
+
+[node name="Midnight enemy17" parent="." instance=ExtResource("3_iqo1m")]
+position = Vector2(5312, 319)
+
+[node name="Midnight enemy18" parent="." instance=ExtResource("3_iqo1m")]
+position = Vector2(5097, 870)
+
+[node name="Midnight enemy19" parent="." instance=ExtResource("3_iqo1m")]
+position = Vector2(5561, 837)
+
+[node name="Midnight enemy20" parent="." instance=ExtResource("3_iqo1m")]
+position = Vector2(3106, 877)
+
+[node name="Midnight enemy21" parent="." instance=ExtResource("3_iqo1m")]
+position = Vector2(3146, 49)
+
+[node name="Midnight enemy22" parent="." instance=ExtResource("3_iqo1m")]
+position = Vector2(3132, 527)

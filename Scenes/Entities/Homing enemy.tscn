@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://b6g832dw320vj"]
+
+[ext_resource type="Script" path="res://Scripts/Enemy logic/Homing_enemy.cs" id="1_4vpoi"]
+[ext_resource type="Texture2D" uid="uid://d3w8gkn1m5hnl" path="res://Sprites/Character sprites/Homing enemy.png" id="1_ph1pg"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_apd2f"]
+radius = 136.015
+
+[node name="Homing enemy" type="CharacterBody2D"]
+collision_layer = 4
+collision_mask = 202
+script = ExtResource("1_4vpoi")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(258, 432)
+texture = ExtResource("1_ph1pg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(261, 425)
+shape = SubResource("CircleShape2D_apd2f")

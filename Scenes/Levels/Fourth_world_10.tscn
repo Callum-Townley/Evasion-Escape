@@ -1,0 +1,79 @@
+[gd_scene load_steps=4 format=3 uid="uid://41i6gad8ufwy"]
+
+[ext_resource type="PackedScene" uid="uid://by0rngplmrxtk" path="res://Scenes/Levels/Fourth_Level_Base.tscn" id="1_p1a4n"]
+[ext_resource type="PackedScene" uid="uid://c4q53fwbdxraj" path="res://Scenes/Entities/Character.tscn" id="2_ws0vt"]
+[ext_resource type="PackedScene" uid="uid://b6g832dw320vj" path="res://Scenes/Entities/Homing enemy.tscn" id="3_l58ar"]
+
+[node name="Fourth_world_10" type="Node2D"]
+
+[node name="Level_Base" parent="." instance=ExtResource("1_p1a4n")]
+position = Vector2(945.196, 494.696)
+
+[node name="Player" parent="." instance=ExtResource("2_ws0vt")]
+position = Vector2(1060, 872)
+
+[node name="Homing enemy" parent="." instance=ExtResource("3_l58ar")]
+position = Vector2(1561, 923)
+
+[node name="Homing enemy2" parent="." instance=ExtResource("3_l58ar")]
+position = Vector2(1690, 357)
+
+[node name="Homing enemy3" parent="." instance=ExtResource("3_l58ar")]
+position = Vector2(2452, 508)
+
+[node name="Homing enemy4" parent="." instance=ExtResource("3_l58ar")]
+position = Vector2(2014, 591)
+
+[node name="Homing enemy5" parent="." instance=ExtResource("3_l58ar")]
+position = Vector2(3223, 651)
+
+[node name="Homing enemy6" parent="." instance=ExtResource("3_l58ar")]
+position = Vector2(4129, 470)
+
+[node name="Homing enemy7" parent="." instance=ExtResource("3_l58ar")]
+position = Vector2(3049, 327)
+
+[node name="Homing enemy8" parent="." instance=ExtResource("3_l58ar")]
+position = Vector2(3109, 644)
+
+[node name="Homing enemy9" parent="." instance=ExtResource("3_l58ar")]
+position = Vector2(4068, 666)
+
+[node name="Homing enemy10" parent="." instance=ExtResource("3_l58ar")]
+position = Vector2(3593, 357)
+
+[node name="Homing enemy11" parent="." instance=ExtResource("3_l58ar")]
+position = Vector2(4680, 591)
+
+[node name="Homing enemy12" parent="." instance=ExtResource("3_l58ar")]
+position = Vector2(3781, 787)
+
+[node name="Homing enemy13" parent="." instance=ExtResource("3_l58ar")]
+position = Vector2(3419, 810)
+
+[node name="Homing enemy14" parent="." instance=ExtResource("3_l58ar")]
+position = Vector2(4831, 855)
+
+[node name="Homing enemy15" parent="." instance=ExtResource("3_l58ar")]
+position = Vector2(4755, 244)
+
+[node name="Homing enemy16" parent="." instance=ExtResource("3_l58ar")]
+position = Vector2(5020, 629)
+
+[node name="Homing enemy17" parent="." instance=ExtResource("3_l58ar")]
+position = Vector2(4378, 780)
+
+[node name="Homing enemy18" parent="." instance=ExtResource("3_l58ar")]
+position = Vector2(5231, 621)
+
+[node name="Homing enemy19" parent="." instance=ExtResource("3_l58ar")]
+position = Vector2(4144, 168)
+
+[node name="Homing enemy20" parent="." instance=ExtResource("3_l58ar")]
+position = Vector2(5186, 387)
+
+[node name="Homing enemy21" parent="." instance=ExtResource("3_l58ar")]
+position = Vector2(5503, 795)
+
+[node name="Homing enemy22" parent="." instance=ExtResource("3_l58ar")]
+position = Vector2(2815, 991)

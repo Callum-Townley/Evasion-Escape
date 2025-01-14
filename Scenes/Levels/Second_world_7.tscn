@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://dwm5qcxdl2isx"]
+
+[ext_resource type="PackedScene" uid="uid://c5spfoxlrm7k0" path="res://Scenes/Levels/Second_Level_Base.tscn" id="1_p61ar"]
+[ext_resource type="PackedScene" uid="uid://cquo83qhby313" path="res://Scenes/Entities/Expanding enemy.tscn" id="2_mqjch"]
+[ext_resource type="PackedScene" uid="uid://c4q53fwbdxraj" path="res://Scenes/Entities/Character.tscn" id="3_ha14f"]
+
+[node name="Second_world_7" type="Node2D"]
+
+[node name="Level_Base" parent="." instance=ExtResource("1_p61ar")]
+position = Vector2(945.196, 494.696)
+
+[node name="Expanding enemy" parent="." instance=ExtResource("2_mqjch")]
+position = Vector2(4571.45, 1020.4)
+
+[node name="Expanding enemy2" parent="." instance=ExtResource("2_mqjch")]
+position = Vector2(2089.45, 434.404)
+
+[node name="Expanding enemy3" parent="." instance=ExtResource("2_mqjch")]
+position = Vector2(3421.45, 724.404)
+
+[node name="Player" parent="." instance=ExtResource("3_ha14f")]
+position = Vector2(1080, 882)

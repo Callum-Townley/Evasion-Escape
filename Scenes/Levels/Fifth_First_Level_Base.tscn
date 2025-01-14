@@ -1,0 +1,171 @@
+[gd_scene load_steps=15 format=3 uid="uid://d0db6165edjq7"]
+
+[ext_resource type="Texture2D" uid="uid://byxyvdsfpsqtb" path="res://Sprites/world assets/Fifth_world_background.png" id="1_lrmj2"]
+[ext_resource type="Texture2D" uid="uid://cqcw41kx1h71w" path="res://Sprites/world assets/Safe zone.png" id="2_4e031"]
+[ext_resource type="Texture2D" uid="uid://bivpki53nvdla" path="res://Sprites/world assets/First_world_wall.png" id="3_khfo6"]
+[ext_resource type="PackedScene" uid="uid://bgsi207ewsde2" path="res://Scenes/level_teleporter.tscn" id="4_dfh0u"]
+[ext_resource type="Script" path="res://Scripts/Scene management/top_world_teleporter.cs" id="5_jdnif"]
+[ext_resource type="Texture2D" uid="uid://nhbqohh3lg2b" path="res://Sprites/world assets/World teleporter.png" id="6_8fy4p"]
+[ext_resource type="Script" path="res://Scripts/Scene management/bottom_world_teleporter.cs" id="7_q00dh"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pqmxi"]
+size = Vector2(804, 1502)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_i8d83"]
+size = Vector2(811, 1517)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_akd5e"]
+size = Vector2(424, 1572)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tv43h"]
+size = Vector2(361, 1537)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_terp2"]
+size = Vector2(7359, 488.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_aqcvv"]
+size = Vector2(7358, 530)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ljd78"]
+size = Vector2(816, 198.156)
+
+[node name="Fifth_Level_Base" type="Node2D"]
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+offset_left = 515.0
+offset_top = -319.0
+offset_right = 5481.0
+offset_bottom = 1223.0
+texture = ExtResource("1_lrmj2")
+
+[node name="First safe zone" type="StaticBody2D" parent="."]
+collision_layer = 8
+
+[node name="TextureRect" type="TextureRect" parent="First safe zone"]
+offset_left = -287.0
+offset_top = -308.0
+offset_right = 519.0
+offset_bottom = 1222.0
+texture = ExtResource("2_4e031")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="First safe zone"]
+position = Vector2(119, 461)
+shape = SubResource("RectangleShape2D_pqmxi")
+
+[node name="Second safe zone" type="StaticBody2D" parent="."]
+collision_layer = 8
+
+[node name="TextureRect" type="TextureRect" parent="Second safe zone"]
+offset_left = 5482.0
+offset_top = -305.0
+offset_right = 6293.0
+offset_bottom = 1215.0
+texture = ExtResource("2_4e031")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Second safe zone"]
+position = Vector2(5886.5, 453.5)
+shape = SubResource("RectangleShape2D_i8d83")
+
+[node name="Left wall" type="StaticBody2D" parent="."]
+collision_layer = 3
+
+[node name="TextureRect" type="TextureRect" parent="Left wall"]
+offset_left = -4072.0
+offset_top = -308.0
+offset_right = -280.0
+offset_bottom = 1221.0
+texture = ExtResource("3_khfo6")
+expand_mode = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Left wall"]
+position = Vector2(-493, 456)
+shape = SubResource("RectangleShape2D_akd5e")
+
+[node name="Right wall" type="StaticBody2D" parent="."]
+collision_layer = 3
+
+[node name="TextureRect" type="TextureRect" parent="Right wall"]
+offset_left = 6288.0
+offset_top = -307.0
+offset_right = 10832.0
+offset_bottom = 1223.0
+texture = ExtResource("3_khfo6")
+expand_mode = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Right wall"]
+position = Vector2(6469.5, 453.5)
+shape = SubResource("RectangleShape2D_tv43h")
+
+[node name="Bottom wall" type="StaticBody2D" parent="."]
+position = Vector2(-97, 4)
+collision_layer = 3
+
+[node name="TextureRect" type="TextureRect" parent="Bottom wall"]
+offset_left = -3979.0
+offset_top = 1215.0
+offset_right = 10905.0
+offset_bottom = 3400.0
+texture = ExtResource("3_khfo6")
+expand_mode = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bottom wall"]
+position = Vector2(3063, 1462.25)
+shape = SubResource("RectangleShape2D_terp2")
+
+[node name="Top wall" type="StaticBody2D" parent="."]
+position = Vector2(2992, -68)
+collision_layer = 3
+
+[node name="TextureRect" type="TextureRect" parent="Top wall"]
+offset_left = -7080.0
+offset_top = -2734.0
+offset_right = 7811.0
+offset_bottom = -240.0
+texture = ExtResource("3_khfo6")
+expand_mode = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Top wall"]
+position = Vector2(-24, -497)
+shape = SubResource("RectangleShape2D_aqcvv")
+
+[node name="level teleporter" parent="." instance=ExtResource("4_dfh0u")]
+collision_layer = 34
+collision_mask = 34
+
+[node name="top_world_teleporter" type="Area2D" parent="."]
+collision_layer = 34
+collision_mask = 34
+script = ExtResource("5_jdnif")
+
+[node name="TextureRect" type="TextureRect" parent="top_world_teleporter"]
+offset_left = -287.0
+offset_top = -305.0
+offset_right = 526.0
+offset_bottom = -109.0
+texture = ExtResource("6_8fy4p")
+expand_mode = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="top_world_teleporter"]
+position = Vector2(120, -206.078)
+shape = SubResource("RectangleShape2D_ljd78")
+
+[node name="bottom_world_teleporter" type="Area2D" parent="."]
+position = Vector2(5, 1327)
+collision_layer = 34
+collision_mask = 34
+script = ExtResource("7_q00dh")
+
+[node name="TextureRect" type="TextureRect" parent="bottom_world_teleporter"]
+offset_left = -287.0
+offset_top = -305.0
+offset_right = 526.0
+offset_bottom = -109.0
+texture = ExtResource("6_8fy4p")
+expand_mode = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="bottom_world_teleporter"]
+position = Vector2(120, -209.813)
+shape = SubResource("RectangleShape2D_ljd78")
+
+[connection signal="body_entered" from="top_world_teleporter" to="top_world_teleporter" method="_on_body_entered"]
+[connection signal="body_entered" from="bottom_world_teleporter" to="bottom_world_teleporter" method="_on_body_entered"]

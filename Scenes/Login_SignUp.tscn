@@ -1,0 +1,114 @@
+[gd_scene load_steps=8 format=3 uid="uid://n61iiewya3pb"]
+
+[ext_resource type="Texture2D" uid="uid://cqmf1dj205qmt" path="res://Sprites/menu mackground.png" id="1_kforc"]
+[ext_resource type="Script" path="res://Scripts/Scene management/Login_SignUp.cs" id="1_sg432"]
+[ext_resource type="Texture2D" uid="uid://djjbhqxtjfiap" path="res://Sprites/Button Sprites/Login Button sprite.png" id="2_2nnkm"]
+[ext_resource type="Script" path="res://Scripts/Scene management/PlayerData.cs" id="2_hsjam"]
+[ext_resource type="Texture2D" uid="uid://bo72iv7kix0kj" path="res://Sprites/Evasion escape title.png" id="3_wg1ep"]
+[ext_resource type="Texture2D" uid="uid://djjd40rkc4n1l" path="res://Sprites/Button Sprites/Sign Up button.png" id="4_q5mfs"]
+[ext_resource type="FontFile" uid="uid://12pnjj0bbm0l" path="res://Sprites/arialroundedmtbold.ttf" id="5_5akup"]
+
+[node name="Login_SignUp" type="Node2D"]
+script = ExtResource("1_sg432")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Control" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_hsjam")
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_kforc")
+expand_mode = 1
+
+[node name="Username_text" type="LineEdit" parent="CanvasLayer/Control"]
+layout_mode = 0
+offset_left = 629.0
+offset_top = 416.0
+offset_right = 945.0
+offset_bottom = 467.0
+
+[node name="Password_text" type="LineEdit" parent="CanvasLayer/Control"]
+layout_mode = 0
+offset_left = 630.0
+offset_top = 517.0
+offset_right = 945.0
+offset_bottom = 572.0
+
+[node name="TextureButton" type="TextureButton" parent="CanvasLayer/Control"]
+layout_mode = 0
+offset_left = 816.0
+offset_top = 630.0
+offset_right = 1240.0
+offset_bottom = 866.0
+texture_normal = ExtResource("2_2nnkm")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="TextureRect2" type="TextureRect" parent="CanvasLayer/Control"]
+layout_mode = 0
+offset_left = 476.0
+offset_top = 45.0
+offset_right = 1100.0
+offset_bottom = 407.0
+texture = ExtResource("3_wg1ep")
+expand_mode = 1
+
+[node name="TextureButton2" type="TextureButton" parent="CanvasLayer/Control"]
+layout_mode = 0
+offset_left = 346.0
+offset_top = 630.0
+offset_right = 764.0
+offset_bottom = 866.0
+texture_normal = ExtResource("4_q5mfs")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer/Control"]
+layout_mode = 0
+offset_left = 690.0
+offset_top = 367.0
+offset_right = 878.0
+offset_bottom = 411.0
+theme_override_colors/default_color = Color(0.414673, 0.955017, 0.582517, 1)
+theme_override_fonts/normal_font = ExtResource("5_5akup")
+theme_override_font_sizes/normal_font_size = 35
+text = "Username
+"
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="CanvasLayer/Control"]
+layout_mode = 0
+offset_left = 693.0
+offset_top = 468.0
+offset_right = 881.0
+offset_bottom = 512.0
+theme_override_colors/default_color = Color(0.414673, 0.955017, 0.582517, 1)
+theme_override_fonts/normal_font = ExtResource("5_5akup")
+theme_override_font_sizes/normal_font_size = 35
+text = "Password
+"
+
+[node name="RichTextLabel3" type="RichTextLabel" parent="CanvasLayer/Control"]
+layout_mode = 0
+offset_left = 585.0
+offset_top = 582.0
+offset_right = 1359.0
+offset_bottom = 626.0
+theme_override_colors/default_color = Color(0.848325, 0, 0.0747886, 1)
+theme_override_fonts/normal_font = ExtResource("5_5akup")
+theme_override_font_sizes/normal_font_size = 35
+bbcode_enabled = true
+
+[connection signal="pressed" from="CanvasLayer/Control/TextureButton" to="." method="_on_texture_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/TextureButton2" to="." method="_on_texture_button_2_pressed"]

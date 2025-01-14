@@ -1,0 +1,43 @@
+[gd_scene load_steps=5 format=3 uid="uid://dhovqo7h4tawi"]
+
+[ext_resource type="PackedScene" uid="uid://boyw6naad888v" path="res://Scenes/Levels/Fifth_Level_Base.tscn" id="1_i02ft"]
+[ext_resource type="PackedScene" uid="uid://c4q53fwbdxraj" path="res://Scenes/Entities/Character.tscn" id="2_a1ma4"]
+[ext_resource type="PackedScene" uid="uid://die4834jmivl2" path="res://Scenes/Entities/Midnight enemy.tscn" id="3_g2te3"]
+[ext_resource type="PackedScene" uid="uid://b7ndidy2xc5dt" path="res://Scenes/Entities/Dash_enemy.tscn" id="4_nmvrs"]
+
+[node name="Fifth_world_9" type="Node2D"]
+
+[node name="Level_Base" parent="." instance=ExtResource("1_i02ft")]
+
+[node name="Player" parent="." instance=ExtResource("2_a1ma4")]
+position = Vector2(135, 443)
+
+[node name="Midnight enemy" parent="." instance=ExtResource("3_g2te3")]
+position = Vector2(841, -92)
+
+[node name="Midnight enemy2" parent="." instance=ExtResource("3_g2te3")]
+position = Vector2(4511, 61)
+
+[node name="Midnight enemy3" parent="." instance=ExtResource("3_g2te3")]
+position = Vector2(2244, -206)
+
+[node name="Dashing enemy" parent="." instance=ExtResource("4_nmvrs")]
+position = Vector2(1704, 213)
+
+[node name="Dashing enemy2" parent="." instance=ExtResource("4_nmvrs")]
+position = Vector2(1616, -339)
+
+[node name="Dashing enemy3" parent="." instance=ExtResource("4_nmvrs")]
+position = Vector2(2904, 258)
+
+[node name="Dashing enemy4" parent="." instance=ExtResource("4_nmvrs")]
+position = Vector2(3285, -92)
+
+[node name="Midnight enemy4" parent="." instance=ExtResource("3_g2te3")]
+position = Vector2(3857, 385)
+
+[node name="Midnight enemy5" parent="." instance=ExtResource("3_g2te3")]
+position = Vector2(3933, -66)
+
+[node name="Dashing enemy5" parent="." instance=ExtResource("4_nmvrs")]
+position = Vector2(2327, 366)

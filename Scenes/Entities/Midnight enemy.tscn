@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://die4834jmivl2"]
+
+[ext_resource type="Texture2D" uid="uid://bm32skrqaxa4s" path="res://Sprites/Character sprites/Midnight enemy.png" id="1_pliix"]
+[ext_resource type="Script" path="res://Scripts/Enemy logic/Midnight_enemy.cs" id="1_qy1ix"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_8qlf8"]
+radius = 137.004
+
+[node name="Midnight enemy" type="CharacterBody2D"]
+collision_layer = 4
+collision_mask = 202
+script = ExtResource("1_qy1ix")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(399, 498)
+texture = ExtResource("1_pliix")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(401, 491)
+shape = SubResource("CircleShape2D_8qlf8")

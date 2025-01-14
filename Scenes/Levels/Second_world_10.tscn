@@ -1,0 +1,79 @@
+[gd_scene load_steps=4 format=3 uid="uid://bvglex5rhwxkh"]
+
+[ext_resource type="PackedScene" uid="uid://c5spfoxlrm7k0" path="res://Scenes/Levels/Second_Level_Base.tscn" id="1_g25pc"]
+[ext_resource type="PackedScene" uid="uid://cquo83qhby313" path="res://Scenes/Entities/Expanding enemy.tscn" id="2_4pty5"]
+[ext_resource type="PackedScene" uid="uid://c4q53fwbdxraj" path="res://Scenes/Entities/Character.tscn" id="3_6muw7"]
+
+[node name="Second_world_10" type="Node2D"]
+
+[node name="Level_Base" parent="." instance=ExtResource("1_g25pc")]
+position = Vector2(945.196, 494.696)
+
+[node name="Expanding enemy" parent="." instance=ExtResource("2_4pty5")]
+position = Vector2(2578, 430)
+
+[node name="Expanding enemy2" parent="." instance=ExtResource("2_4pty5")]
+position = Vector2(1701, 163)
+
+[node name="Expanding enemy3" parent="." instance=ExtResource("2_4pty5")]
+position = Vector2(1606, 950)
+
+[node name="Expanding enemy4" parent="." instance=ExtResource("2_4pty5")]
+position = Vector2(2127, 576)
+
+[node name="Expanding enemy5" parent="." instance=ExtResource("2_4pty5")]
+position = Vector2(3054, 1014)
+
+[node name="Expanding enemy6" parent="." instance=ExtResource("2_4pty5")]
+position = Vector2(3340, 119)
+
+[node name="Expanding enemy7" parent="." instance=ExtResource("2_4pty5")]
+position = Vector2(4133, 620)
+
+[node name="Expanding enemy8" parent="." instance=ExtResource("2_4pty5")]
+position = Vector2(3611, 582)
+
+[node name="Expanding enemy9" parent="." instance=ExtResource("2_4pty5")]
+position = Vector2(4551, 74)
+
+[node name="Expanding enemy10" parent="." instance=ExtResource("2_4pty5")]
+position = Vector2(4925, 900)
+
+[node name="Expanding enemy11" parent="." instance=ExtResource("2_4pty5")]
+position = Vector2(4398, 296)
+
+[node name="Expanding enemy12" parent="." instance=ExtResource("2_4pty5")]
+position = Vector2(2982, 538)
+
+[node name="Expanding enemy13" parent="." instance=ExtResource("2_4pty5")]
+position = Vector2(1662, 626)
+
+[node name="Expanding enemy14" parent="." instance=ExtResource("2_4pty5")]
+position = Vector2(2678, 696)
+
+[node name="Expanding enemy15" parent="." instance=ExtResource("2_4pty5")]
+position = Vector2(2017, 347)
+
+[node name="Expanding enemy16" parent="." instance=ExtResource("2_4pty5")]
+position = Vector2(3294, 601)
+
+[node name="Expanding enemy17" parent="." instance=ExtResource("2_4pty5")]
+position = Vector2(3681, 493)
+
+[node name="Expanding enemy18" parent="." instance=ExtResource("2_4pty5")]
+position = Vector2(3909, 474)
+
+[node name="Expanding enemy19" parent="." instance=ExtResource("2_4pty5")]
+position = Vector2(4360, 576)
+
+[node name="Expanding enemy20" parent="." instance=ExtResource("2_4pty5")]
+position = Vector2(4983, 480)
+
+[node name="Expanding enemy21" parent="." instance=ExtResource("2_4pty5")]
+position = Vector2(1497, 614)
+
+[node name="Expanding enemy22" parent="." instance=ExtResource("2_4pty5")]
+position = Vector2(1186, 588)
+
+[node name="Player" parent="." instance=ExtResource("3_6muw7")]
+position = Vector2(1096, 886)

@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://bq5h8rqeepvgd"]
+
+[ext_resource type="PackedScene" uid="uid://bcqe1mfpsdhgp" path="res://Scenes/Levels/First_Level_Base.tscn" id="1_u237w"]
+[ext_resource type="PackedScene" uid="uid://rr55cgkcofa6" path="res://Scenes/Normal_Enemy.tscn" id="2_0ts6i"]
+[ext_resource type="PackedScene" uid="uid://c4q53fwbdxraj" path="res://Scenes/Entities/Character.tscn" id="3_lukbo"]
+
+[node name="First_world_1" type="Node2D"]
+
+[node name="First Level Base" parent="." instance=ExtResource("1_u237w")]
+
+[node name="Normal_enemy" parent="." instance=ExtResource("2_0ts6i")]
+position = Vector2(1286, -197)
+
+[node name="Normal_enemy2" parent="." instance=ExtResource("2_0ts6i")]
+position = Vector2(3524, 226)
+
+[node name="Normal_enemy3" parent="." instance=ExtResource("2_0ts6i")]
+position = Vector2(4953, -508)
+
+[node name="Player" parent="." instance=ExtResource("3_lukbo")]
+position = Vector2(341, 454)

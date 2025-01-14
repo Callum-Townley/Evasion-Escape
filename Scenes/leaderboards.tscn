@@ -1,0 +1,70 @@
+[gd_scene load_steps=7 format=3 uid="uid://bm7whnvsdmngb"]
+
+[ext_resource type="Script" path="res://Scripts/Scene management/leaderboards.cs" id="1_ie4ln"]
+[ext_resource type="Texture2D" uid="uid://cqmf1dj205qmt" path="res://Sprites/menu mackground.png" id="1_tu6gd"]
+[ext_resource type="Script" path="res://Scripts/Scene management/leaderboard_first_half.cs" id="3_7gfmv"]
+[ext_resource type="FontFile" uid="uid://12pnjj0bbm0l" path="res://Sprites/arialroundedmtbold.ttf" id="3_g18xd"]
+[ext_resource type="Texture2D" uid="uid://br5ts3ug334ks" path="res://Sprites/Leaderboard title.png" id="5_fuuke"]
+[ext_resource type="Texture2D" uid="uid://dclm0bg473kk4" path="res://Sprites/Button Sprites/Back button.png" id="6_umfif"]
+
+[node name="Leaderboards" type="Node2D"]
+script = ExtResource("1_ie4ln")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Control" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_tu6gd")
+expand_mode = 1
+
+[node name="PanelContainer" type="PanelContainer" parent="CanvasLayer/Control"]
+layout_mode = 0
+offset_left = 470.0
+offset_top = 211.0
+offset_right = 1163.0
+offset_bottom = 872.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer/Control/PanelContainer"]
+layout_mode = 2
+theme_override_colors/default_color = Color(0.39943, 0.959649, 0.4355, 1)
+theme_override_fonts/normal_font = ExtResource("3_g18xd")
+theme_override_font_sizes/normal_font_size = 40
+bbcode_enabled = true
+text = "
+
+"
+script = ExtResource("3_7gfmv")
+
+[node name="TextureRect2" type="TextureRect" parent="CanvasLayer/Control"]
+layout_mode = 0
+offset_left = 469.0
+offset_top = 4.0
+offset_right = 1254.0
+offset_bottom = 410.0
+texture = ExtResource("5_fuuke")
+expand_mode = 1
+
+[node name="TextureButton" type="TextureButton" parent="CanvasLayer/Control"]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 23.0
+offset_right = 371.0
+offset_bottom = 239.0
+texture_normal = ExtResource("6_umfif")
+ignore_texture_size = true
+stretch_mode = 0
+
+[connection signal="pressed" from="CanvasLayer/Control/TextureButton" to="." method="_on_texture_button_pressed"]

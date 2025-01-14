@@ -1,0 +1,30 @@
+[gd_scene load_steps=4 format=3 uid="uid://crwvj4071gmp6"]
+
+[ext_resource type="PackedScene" uid="uid://boyw6naad888v" path="res://Scenes/Levels/Fifth_Level_Base.tscn" id="1_ijgie"]
+[ext_resource type="PackedScene" uid="uid://c4q53fwbdxraj" path="res://Scenes/Entities/Character.tscn" id="2_lip86"]
+[ext_resource type="PackedScene" uid="uid://b7ndidy2xc5dt" path="res://Scenes/Entities/Dash_enemy.tscn" id="3_tk5gl"]
+
+[node name="Fifth_world_5" type="Node2D"]
+
+[node name="Level_Base" parent="." instance=ExtResource("1_ijgie")]
+
+[node name="Player" parent="." instance=ExtResource("2_lip86")]
+position = Vector2(108, 437)
+
+[node name="Dashing enemy" parent="." instance=ExtResource("3_tk5gl")]
+position = Vector2(1421, -26)
+
+[node name="Dashing enemy2" parent="." instance=ExtResource("3_tk5gl")]
+position = Vector2(2989, -56)
+
+[node name="Dashing enemy3" parent="." instance=ExtResource("3_tk5gl")]
+position = Vector2(2124, -344)
+
+[node name="Dashing enemy4" parent="." instance=ExtResource("3_tk5gl")]
+position = Vector2(620, 131)
+
+[node name="Dashing enemy5" parent="." instance=ExtResource("3_tk5gl")]
+position = Vector2(3777, -280)
+
+[node name="Dashing enemy6" parent="." instance=ExtResource("3_tk5gl")]
+position = Vector2(2302, 181)

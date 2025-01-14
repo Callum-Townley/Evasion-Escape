@@ -1,0 +1,69 @@
+[gd_scene load_steps=5 format=3 uid="uid://cqenvccu585xv"]
+
+[ext_resource type="Script" path="res://Scripts/Scene management/how_to_play.cs" id="1_ajhvf"]
+[ext_resource type="Texture2D" uid="uid://cqmf1dj205qmt" path="res://Sprites/menu mackground.png" id="1_p3nbl"]
+[ext_resource type="Texture2D" uid="uid://dclm0bg473kk4" path="res://Sprites/Button Sprites/Back button.png" id="2_bfbvd"]
+[ext_resource type="FontFile" uid="uid://12pnjj0bbm0l" path="res://Sprites/arialroundedmtbold.ttf" id="4_2n8tr"]
+
+[node name="HowToPlay" type="Node2D"]
+script = ExtResource("1_ajhvf")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Control" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_p3nbl")
+expand_mode = 1
+
+[node name="TextureButton" type="TextureButton" parent="CanvasLayer/Control"]
+layout_mode = 0
+offset_right = 371.0
+offset_bottom = 275.0
+texture_normal = ExtResource("2_bfbvd")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer/Control"]
+layout_mode = 0
+offset_left = 524.0
+offset_top = 36.0
+offset_right = 1415.0
+offset_bottom = 815.0
+theme_override_colors/default_color = Color(0.415467, 0.744919, 0.398649, 1)
+theme_override_fonts/normal_font = ExtResource("4_2n8tr")
+theme_override_font_sizes/normal_font_size = 30
+text = "Your goal is to beat all 5 worlds 
+
+You start off with 4 characters and can unlock 5 more by completing each world
+
+Each character has two very powerful abilities which can be used to pass levels faster and more easily
+
+Use WASD to move when playing, or press the options button in the bottom right in game to swap to mouse controls(the character will follow the mouse after you have left clicked)
+
+J and K are for abilities 1 and 2 respectively
+
+Each world gives a varying amount of Victory Points depending on the difficulty of the world,which will put you on the leaderboard! 1st,2nd and 3rd place get different coloured names in game.
+
+Goodluck and have fun!
+
+
+
+
+
+"
+scroll_active = false
+
+[connection signal="pressed" from="CanvasLayer/Control/TextureButton" to="." method="_on_texture_button_pressed"]

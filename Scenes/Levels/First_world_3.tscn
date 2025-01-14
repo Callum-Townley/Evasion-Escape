@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://635rtlai6628"]
+
+[ext_resource type="PackedScene" uid="uid://cruw1gobsq6yi" path="res://Scenes/Levels/Level_Base.tscn" id="1_vw3op"]
+[ext_resource type="PackedScene" uid="uid://rr55cgkcofa6" path="res://Scenes/Normal_Enemy.tscn" id="2_3c6o2"]
+[ext_resource type="PackedScene" uid="uid://c4q53fwbdxraj" path="res://Scenes/Entities/Character.tscn" id="3_rv6pt"]
+
+[node name="First_world_3" type="Node2D"]
+
+[node name="Level_Base" parent="." instance=ExtResource("1_vw3op")]
+
+[node name="Normal_enemy" parent="." instance=ExtResource("2_3c6o2")]
+position = Vector2(4568, -276)
+
+[node name="Normal_enemy2" parent="." instance=ExtResource("2_3c6o2")]
+position = Vector2(1211, -202)
+
+[node name="Normal_enemy3" parent="." instance=ExtResource("2_3c6o2")]
+position = Vector2(3713, 168)
+
+[node name="Normal_enemy4" parent="." instance=ExtResource("2_3c6o2")]
+position = Vector2(1231, 545)
+
+[node name="Normal_enemy5" parent="." instance=ExtResource("2_3c6o2")]
+position = Vector2(1937, 34)
+
+[node name="Player" parent="." instance=ExtResource("3_rv6pt")]
+position = Vector2(146, 422)

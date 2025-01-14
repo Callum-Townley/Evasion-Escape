@@ -1,0 +1,15 @@
+# Godot-specific files
+.import/
+.export/
+.export_templates/
+.godot/
+
+# Cache files
+*.cache
+*.import
+
+# Compiled files
+*.exe
+*.apk
+*.pck
+*.log

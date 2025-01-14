@@ -1,0 +1,78 @@
+[gd_scene load_steps=4 format=3 uid="uid://nnp43yn8caf1"]
+
+[ext_resource type="PackedScene" uid="uid://cruw1gobsq6yi" path="res://Scenes/Levels/Level_Base.tscn" id="1_03gia"]
+[ext_resource type="PackedScene" uid="uid://rr55cgkcofa6" path="res://Scenes/Normal_Enemy.tscn" id="2_r4von"]
+[ext_resource type="PackedScene" uid="uid://c4q53fwbdxraj" path="res://Scenes/Entities/Character.tscn" id="3_o6nir"]
+
+[node name="First_world_10" type="Node2D"]
+
+[node name="Level_Base" parent="." instance=ExtResource("1_03gia")]
+
+[node name="Normal_enemy" parent="." instance=ExtResource("2_r4von")]
+position = Vector2(3175, 20)
+
+[node name="Normal_enemy2" parent="." instance=ExtResource("2_r4von")]
+position = Vector2(3707, 135)
+
+[node name="Normal_enemy3" parent="." instance=ExtResource("2_r4von")]
+position = Vector2(3411, 161)
+
+[node name="Normal_enemy4" parent="." instance=ExtResource("2_r4von")]
+position = Vector2(2900, 249)
+
+[node name="Normal_enemy5" parent="." instance=ExtResource("2_r4von")]
+position = Vector2(2039, 47)
+
+[node name="Normal_enemy6" parent="." instance=ExtResource("2_r4von")]
+position = Vector2(2435, 262)
+
+[node name="Normal_enemy7" parent="." instance=ExtResource("2_r4von")]
+position = Vector2(2644, 6)
+
+[node name="Normal_enemy8" parent="." instance=ExtResource("2_r4von")]
+position = Vector2(1715, 269)
+
+[node name="Normal_enemy9" parent="." instance=ExtResource("2_r4von")]
+position = Vector2(1366, 175)
+
+[node name="Normal_enemy10" parent="." instance=ExtResource("2_r4von")]
+position = Vector2(848, 336)
+
+[node name="Normal_enemy11" parent="." instance=ExtResource("2_r4von")]
+position = Vector2(2749, 588)
+
+[node name="Normal_enemy12" parent="." instance=ExtResource("2_r4von")]
+position = Vector2(3598, 447)
+
+[node name="Normal_enemy13" parent="." instance=ExtResource("2_r4von")]
+position = Vector2(3157, -436)
+
+[node name="Normal_enemy14" parent="." instance=ExtResource("2_r4von")]
+position = Vector2(1375, -328)
+
+[node name="Normal_enemy15" parent="." instance=ExtResource("2_r4von")]
+position = Vector2(3247, 537)
+
+[node name="Normal_enemy16" parent="." instance=ExtResource("2_r4von")]
+position = Vector2(3694, -226)
+
+[node name="Normal_enemy17" parent="." instance=ExtResource("2_r4von")]
+position = Vector2(1771, -424)
+
+[node name="Normal_enemy18" parent="." instance=ExtResource("2_r4von")]
+position = Vector2(2574, -334)
+
+[node name="Normal_enemy20" parent="." instance=ExtResource("2_r4von")]
+position = Vector2(2155, 605)
+
+[node name="Normal_enemy21" parent="." instance=ExtResource("2_r4von")]
+position = Vector2(1267, 560)
+
+[node name="Normal_enemy19" parent="." instance=ExtResource("2_r4von")]
+position = Vector2(741, -28)
+
+[node name="Normal_enemy22" parent="." instance=ExtResource("2_r4von")]
+position = Vector2(1069, -198)
+
+[node name="Player" parent="." instance=ExtResource("3_o6nir")]
+position = Vector2(154, 493)

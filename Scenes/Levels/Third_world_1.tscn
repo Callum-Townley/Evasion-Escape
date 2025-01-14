@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://xkcx18r43ts0"]
+
+[ext_resource type="PackedScene" uid="uid://dhytfswqtmjlg" path="res://Scenes/Levels/Third_First_Level_Base.tscn" id="1_vvbji"]
+[ext_resource type="PackedScene" uid="uid://die4834jmivl2" path="res://Scenes/Entities/Midnight enemy.tscn" id="2_qx6ff"]
+[ext_resource type="PackedScene" uid="uid://c4q53fwbdxraj" path="res://Scenes/Entities/Character.tscn" id="3_5x8xb"]
+
+[node name="Third_world_1" type="Node2D"]
+
+[node name="Third_Level_Base" parent="." instance=ExtResource("1_vvbji")]
+
+[node name="Midnight enemy" parent="." instance=ExtResource("2_qx6ff")]
+position = Vector2(1284, 2)
+
+[node name="Player" parent="." instance=ExtResource("3_5x8xb")]
+position = Vector2(-92, 497)
+
+[node name="Midnight enemy2" parent="." instance=ExtResource("2_qx6ff")]
+position = Vector2(2640, -142)
+
+[node name="Midnight enemy3" parent="." instance=ExtResource("2_qx6ff")]
+position = Vector2(3971, 113)
